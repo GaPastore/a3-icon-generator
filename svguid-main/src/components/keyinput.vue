@@ -1,8 +1,8 @@
 <template>
     <div class="flex items-center justify-center">
         <div class="flex items-center justify-between">
-            <h1 class="title-font sm:text-3xl text-2xl mb-4 font-sans @light:text-gray-900 @dark:text-white">
-                Digite um identificador
+            <h1 class="title-font sm:text-3xl text-2xl mb-4 font-serif @light:text-gray-900 @dark:text-white">
+                Insira o texto aqui:
             </h1>
         </div>
         <div class="w-full flex items-center justify-center gap-2">

@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <topbar />
-    <section class="relative h-full @light:text-gray-600 @dark:text-white body-font @dark:bg-gray-900 @light:bg-white">
+    <topbar/>
+    <section class="h-full @light:text-gray-600 @dark:text-white body-font @dark:bg-[#1d1d1b] @light:bg-white">
       <div class="container py-10 mx-auto w-full md:w-1/2">
         <div class="">
           <keyinput @keyChanged="keyChanged"/>
@@ -9,16 +9,18 @@
         </div>
       </div>
     </section>
+    <bottombar/>
   </div>
 </template>
 
 <script>
+import bottombar from "./components/bottombar.vue"
 import topbar from "./components/topbar.vue"
 import keyinput from "./components/keyinput.vue"
 import svg_view from "./components/svg_view.vue"
 
 export default {
-  components: { topbar, keyinput, svg_view },
+  components: { topbar, keyinput, svg_view, bottombar },
   data() {
     return {
       menu_sel: "genid"
@@ -44,4 +46,4 @@ export default {
   },
 }
 </script>
-<style></style>./components/topbar.vue
+<style></style>
