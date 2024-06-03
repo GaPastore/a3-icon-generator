@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-center">
         <div class="flex items-center justify-between">
-            <h1 class="title-font sm:text-3xl text-2xl mb-4 font-medium text-gray-900">
+            <h1 class="title-font sm:text-3xl text-2xl mb-4 font-sans @light:text-gray-900 @dark:text-white">
                 Digite um identificador
             </h1>
         </div>
@@ -56,6 +56,17 @@ export default {
             this.$refs.dialog_params_ref.show(this.key)
         }
 
+    }, 
+    theme: {
+        extend: {
+          fontFamily: {
+            sans: ['ui-sans-serif', 'system-ui'],
+            serif: ['ui-serif', 'Georgia'],
+            mono: ['ui-monospace', 'SFMono-Regular'],
+            display: ['Oswald'],
+            body: ['Open Sans'],
+          },
+        },
     },
 }
 </script>

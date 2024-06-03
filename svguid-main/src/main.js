@@ -7,6 +7,7 @@ import quasarLang from 'quasar/lang/pt-BR'
 import 'virtual:windi.css'
 import '@quasar/extras/material-icons/material-icons.css'
 import 'quasar/src/css/index.sass'
+import './main.css'
 
 const app = createApp(App)
 app.component('Icon', Icon)

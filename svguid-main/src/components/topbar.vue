@@ -1,14 +1,12 @@
 <template>
-  <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+  <header class="text-gray-600 body-font @dark:bg-gray-800 @light:bg-gray-200">
+    <div class="container mx-auto flex flex-wrap p-15 flex-col md:flex-row items-center justify-center">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <img class="w-40" src="/logo.png" />
+        <picture class="w-130">
+          <source srcset="iconomonster.png" media="(prefers-color-scheme: light)">
+          <img src="iconomonster white.png">
+        </picture>
       </a>
-      <button
-        class="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-white text-base mt-4 md:mt-0">
-        svguid
-        <Icon icon="mdi:github" class="ml-1 text-2xl" />
-      </button>
     </div>
   </header>
 </template>
@@ -25,5 +23,4 @@ export default {
 }
 </script>
 <style lang="">
-
 </style>

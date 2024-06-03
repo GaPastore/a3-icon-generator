@@ -1,8 +1,8 @@
 <template>
   <div class="">
     <topbar />
-    <section class="text-gray-600 body-font">
-      <div class="container mx-auto w-full md:w-1/2">
+    <section class="relative h-full @light:text-gray-600 @dark:text-white body-font @dark:bg-gray-900 @light:bg-white">
+      <div class="container py-10 mx-auto w-full md:w-1/2">
         <div class="">
           <keyinput @keyChanged="keyChanged"/>
           <svg_view ref="svg_view_ref" />
