@@ -1,6 +1,5 @@
 <template>
-    <div class="mt-3 flex justify-center">
-
+    <div class="px-3 mt-3 flex justify-center">
         <svg width="500" height="500"
              viewBox="0 0 500 500" version="1.1"
              xmlns="http://www.w3.org/2000/svg"
@@ -15,30 +14,32 @@
 import { SVG, Container, extend } from '@svgdotjs/svg.js'
 import widget from "../widget/mywidget.js"
 import keygen from "../keygen.js"
-import svgjsblob from "../blob.js";
+import svgjsblob from "../blob.js"
+import { btValue } from '../App.vue'
 
 export default {
     data() {
         return {
             innercode: '',
             key: null,
-            SVG: null
+            SVG: null,
         }
     },
+
     mounted() {
         if(!this.key) {
             this.refresh(keygen.getKeyParams(""))
         }
     },
+
     methods: {
         
         refresh(key) {
-            //console.log(key);
             this.key = key
+            let val = btValue
             extend(Container, svgjsblob)
             let draw = SVG().viewbox(0, 0, 1000, 1000)
-            //draw.rect().attr({ x: 0, y: 0, width: 1000, height: 1000, stroke: 'blue', "fill-opacity": 0 })
-            widget(key,draw)
+            widget(key,draw,val)
             this.innercode = draw.svg()
         },
 
@@ -51,4 +52,4 @@ export default {
 </script>
 <style lang="">
 
-</style>../widget/widget03.js
+</style>

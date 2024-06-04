@@ -15,7 +15,8 @@
     "@svgdotjs/svg.js": "^3.2.0",
     "quasar": "^2.15.4",
     "simple-code-editor": "^2.0.9",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@quasar/vite-plugin": "^1.6.0",
