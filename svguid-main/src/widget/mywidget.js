@@ -35,6 +35,11 @@ export default function (key, draw, col, bg, sca) {
             break
 
     }
+    
+    d.fill(nextColor()).opacity(1)
+    d.move(62.5,62.5).size(875)
+    d.addTo(draw) 
+
     if(col == undefined || null || 'mon'){
         b.opacity(1)
         b.move(312.5-(62.5*sca),312.5-(62.5*sca)).size(375+(125*sca)).fill('#151515')
@@ -47,10 +52,6 @@ export default function (key, draw, col, bg, sca) {
         
     e.fill("#fff").opacity(1)
     e.move(375,375).size(250)
-    e.addTo(draw)
-
-    d.fill(nextColor()).opacity(1)
-    d.move(62.5,62.5).size(875)
-    d.addTo(draw)    
+    e.addTo(draw)   
     
 }

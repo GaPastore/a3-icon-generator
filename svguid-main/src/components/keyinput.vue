@@ -8,8 +8,13 @@
         <div class="flex items-center justify-center gap-2">
             <div class="w-[266px]">
                 <input @keyup="updateID" v-model="id" type="text" id="hero-field" name="hero-field"
-                    class="w-full bg-[#42B242] rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none @dark:text-white @light:text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                class="w-full bg-[#42B242] rounded border bg-opacity-50 border-gray-300 focus:ring-2
+                focus:ring-indigo-200 
+                focus:bg-transparent focus:border-indigo-500 
+                text-base outline-none @dark:text-white @light:text-black 
+                py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             </div>
+            <button class="transition w-[190px] self-center text-white bg-[#42B242] hover:bg-[#834FBA] @dark:bg-[#834FBA] @dark:hover:bg-[#42B242] p-4 h-15 rounded-2xl" v-on:click="updateID">Atualizar Iconomonster</button>
         </div>
     </div>
 </template>

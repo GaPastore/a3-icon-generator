@@ -24,32 +24,29 @@ export var newColor = null
 export var newBg = null
 export var newScale = 1
 
-
 export default {
-
+    
     mounted(){
-        this.newBgValue()
-        this.newColorValue()
     },
 
     methods: {
 
         newBgValue(string){
-          newBg = string
-          console.log(newBg)
-          return newBg
+            newBg = string
+            console.log(newBg)
+            return newBg
         },
 
         newColorValue(string){
-          newColor = string
-          console.log(newColor)
-          return newColor
+            newColor = string
+            console.log(newColor)
+            return newColor
         },
         
         newScaleValue(event){
-          newScale = event.target.value
-          console.log(newScale)
-          return newScale
+            newScale = event.target.value
+            console.log(newScale)
+            return newScale
         }
 
     }

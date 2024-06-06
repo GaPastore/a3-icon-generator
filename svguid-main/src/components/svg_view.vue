@@ -1,11 +1,10 @@
 <template>
     <div id="svg-container" class="px-3 mt-3 flex justify-center">
-        <svg width="500" height="500"
+        <svg class="w-[500px] h-[500px]" width="1000" height="1000"
              viewBox="0 0 500 500" version="1.1"
              xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
-             <rect x="0" y="0" width="1000" height="1000" style="fill-opacity: 0; stroke: grey;"/>
-             <g v-html="innercode"></g>
+             <g id="draw" v-html="innercode"></g>
         </svg>
     </div>
 </template>
