@@ -1,7 +1,7 @@
 # Gerador de ícones - A3 Computação Gráfica e Realidade Virtual
 
 ## Integrantes:
-Alef Rosa Annibal - RA: 821247230
+Alef Rosa Annibal - RA: 821247230 <br />
 Gabriel Pastore - RA: 821224010
 Pedro Luccas Gomes Costa - RA: 82321206
 Pedro Henrique Morais Pereira - RA: 822145369
