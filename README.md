@@ -25,3 +25,9 @@ E em seguida
 
 ## Exemplos de imagens geradas com nosso programa:
 
+<ul type="circle">
+  <li>My</li>
+  <li>Project</li>
+  <li>is</li>
+  <li>big</li>
+</ul>
