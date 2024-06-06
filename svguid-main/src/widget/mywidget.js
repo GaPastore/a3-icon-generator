@@ -3,7 +3,7 @@ import body from "./utils/monsters/body.js"
 import eyes from "./utils/monsters/eyes.js"
 import details from "./utils/monsters/details.js"
 
-export default function (key, draw, val) {
+export default function (key, draw, col, bg, sca) {
 
     let nextColor = getColorIterator(key)
 
@@ -14,54 +14,43 @@ export default function (key, draw, val) {
     let e = eyes(key.next256())
     let d = details(key.next256())
 
-    switch(val){
-        case null:
-            b.opacity(1)
-            b.move(250,250).size(500).fill('#151515')
-            b.addTo(draw)
-            break
+    switch(bg){
+
         case 'qua':
             for (let lin = 0; lin < 5; lin++) {
                 for (let col = 0; col < 5; col++) {
-                
                     draw.rect().size(200, 200).move(200 * col, lin * 200).fill(nextColor()).opacity(0.25)
-
                 }
             }
-            b.opacity(1)
-            b.move(250,250).size(500).fill('#151515')
-            b.addTo(draw)
             break
         case 'lis':
             for (let col = 0; col < 5; col++) {
                 draw.rect().size(1000, 200).move(0, col * 200).fill(nextColor()).opacity(0.25)
             }
-            b.opacity(1)
-            b.move(250,250).size(500).fill('#151515')
-            b.addTo(draw)
-            break
-        case 'col':
-            b.opacity(1)
-            b.move(250,250).size(500).fill(nextColor())
-            b.addTo(draw)
             break
         case 'cir':
             for (let i = 0; i < 10; i++){
                 draw.circle().radius(100*i+1).move(500-(i*100),500-(i*100)).fill(nextColor()).opacity(0.25)
             }
-            b.opacity(1)
-            b.move(250,250).size(500).fill('#151515')
-            b.addTo(draw)
             break
 
-    }    
-
+    }
+    if(col == undefined || null || 'mon'){
+        b.opacity(1)
+        b.move(312.5-(62.5*sca),312.5-(62.5*sca)).size(375+(125*sca)).fill('#151515')
+        b.addTo(draw)
+    } if(col == 'col'){
+        b.opacity(1)
+        b.move(312.5-(62.5*sca),312.5-(62.5*sca)).size(375+(125*sca)).fill(nextColor())
+        b.addTo(draw)
+    }
+        
     e.fill("#fff").opacity(1)
     e.move(375,375).size(250)
     e.addTo(draw)
 
     d.fill(nextColor()).opacity(1)
-    d.move(125,125).size(750)
+    d.move(62.5,62.5).size(875)
     d.addTo(draw)    
     
 }

@@ -1,12 +1,12 @@
 <template>
-    <div class="px-3 mt-3 flex justify-center">
+    <div id="svg-container" class="px-3 mt-3 flex justify-center">
         <svg width="500" height="500"
              viewBox="0 0 500 500" version="1.1"
              xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink">
-             <rect x="0" y="0" width="400" height="400" style="fill-opacity: 0; stroke: grey;"/>
+             xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+             <rect x="0" y="0" width="1000" height="1000" style="fill-opacity: 0; stroke: grey;"/>
              <g v-html="innercode"></g>
-        </svg>    
+        </svg>
     </div>
 </template>
 
@@ -15,7 +15,7 @@ import { SVG, Container, extend } from '@svgdotjs/svg.js'
 import widget from "../widget/mywidget.js"
 import keygen from "../keygen.js"
 import svgjsblob from "../blob.js"
-import { btValue } from '../App.vue'
+import { newColor, newBg, newScale } from './buttons.vue'
 
 export default {
     data() {
@@ -36,10 +36,12 @@ export default {
         
         refresh(key) {
             this.key = key
-            let val = btValue
+            let col = newColor
+            let bg = newBg
+            let sca = newScale
             extend(Container, svgjsblob)
             let draw = SVG().viewbox(0, 0, 1000, 1000)
-            widget(key,draw,val)
+            widget(key, draw, col, bg, sca)
             this.innercode = draw.svg()
         },
 

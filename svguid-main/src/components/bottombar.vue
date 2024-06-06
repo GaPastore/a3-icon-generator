@@ -1,5 +1,5 @@
 <template>
-    <footer class="text-white text-center text-lg content-center body-font @dark:bg-[#834FBA] @light:bg-gray-200 h-[15vh]">
+    <footer class="@dark:text-white text-gray-900 text-center text-lg content-center body-font @dark:bg-gray-800 @light:bg-gray-300 h-[15vh]">
         Iconomonster - 2024
     </footer>
   </template>
